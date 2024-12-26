@@ -1,0 +1,17 @@
+Sys $1 System.err.println(""); $0
+
+
+
+
+String[] getEmailsByDept(String DEPT_NO){
+	String[][] ret = null;
+	String sql = "select EMAIL from HRUSER a join HRUSER_DEPT b on a.EMPID = b.ID where b.DEP_NO = '" + convert,ToSql(DEPT_NO)+"' ";
+	ret = t.queryFromPool(sql);
+	Vector vEMAILS = new Vector();
+	for(int i=0; i<ret.length; i++){
+		vEMAILS.add(ret[i][0]);
+	}
+
+	return (String[])vEMAILS.toArray(new String[0]);
+}
+
